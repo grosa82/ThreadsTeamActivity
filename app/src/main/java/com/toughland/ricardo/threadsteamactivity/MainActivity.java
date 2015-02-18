@@ -1,10 +1,9 @@
 package com.toughland.ricardo.threadsteamactivity;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,17 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.util.concurrent.ExecutionException;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -102,11 +94,11 @@ public class MainActivity extends ActionBarActivity {
                 if (actions[0] == actionType.create) {
                     // create action
 
-                    writeToFile("1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20");
+                    writeToFile("1-2-3-4-5-6-7-8-9-10");
 
                     // taking a nap and publishing the progress bar
                     for (int i = 0; i <= 100; i += 10) {
-                        Thread.sleep(50);
+                        Thread.sleep(250);
                         publishProgress(i);
                     }
                 }
@@ -121,7 +113,7 @@ public class MainActivity extends ActionBarActivity {
 
                     // taking a nap and publishing the progress bar
                     for (int i = 0; i <= 100; i += 10) {
-                        Thread.sleep(50);
+                        Thread.sleep(250);
                         publishProgress(i);
                     }
                 } else {
